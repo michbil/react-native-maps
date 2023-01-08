@@ -1,3 +1,5 @@
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
 def safeExtGet(prop, fallback) {
   rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
@@ -50,4 +52,17 @@ dependencies {
   implementation "com.google.android.gms:play-services-location:19.0.1"
   implementation 'com.google.maps.android:android-maps-utils:0.5'
   implementation "androidx.work:work-runtime:$work_version"
+}
+
+react {
+    libraryName = "samplelibrary"
+    codegenJavaPackageName = "com.example"
+    root = rootProject.file("..")
+    jsRootDir = rootProject.file("../src/")
+    reactNativeDir = rootProject.file("../node_modules/react-native/")
+    codegenDir = rootProject.file("../node_modules/react-native-codegen/")
+}
+
+preBuild {
+  
 }

@@ -63,7 +63,7 @@
     if (self){
         _snapshot = snapshot;
         _polyline = polyline;
-        _coordinates = malloc(sizeof(CLLocationCoordinate2D) * [_polyline pointCount]);
+        _coordinates = (CLLocationCoordinate2D*) malloc(sizeof(CLLocationCoordinate2D) * [_polyline pointCount]);
         [_polyline getCoordinates:_coordinates range:NSMakeRange(0, [_polyline pointCount])];
     }
     return self;

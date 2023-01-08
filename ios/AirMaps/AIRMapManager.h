@@ -15,15 +15,14 @@
 
 @interface AIRMapManager : RCTViewManager
 
-
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate
-    zoomLevel:(double)zoomLevel
-    animated:(BOOL)animated
-    mapView:(AIRMap *)mapView;
+                  zoomLevel:(double)zoomLevel
+                   animated:(BOOL)animated
+                    mapView:(AIRMap *)mapView;
 
 - (MKCoordinateRegion)coordinateRegionWithMapView:(AIRMap *)mapView
                                  centerCoordinate:(CLLocationCoordinate2D)centerCoordinate
-								                     andZoomLevel:(double)zoomLevel;
-- (double) zoomLevel:(AIRMap *)mapView;
+                                     andZoomLevel:(double)zoomLevel;
+- (double)zoomLevel:(AIRMap *)mapView;
 
 @end

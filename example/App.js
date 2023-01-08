@@ -8,7 +8,7 @@ import {
   Text,
   Switch,
 } from 'react-native';
-import {PROVIDER_GOOGLE, PROVIDER_DEFAULT} from '../index';
+import {PROVIDER_GOOGLE, PROVIDER_DEFAULT} from 'react-native-maps';
 import DisplayLatLng from './examples/DisplayLatLng';
 import ViewsAsMarkers from './examples/ViewsAsMarkers';
 import EventListener from './examples/EventListener';
@@ -182,8 +182,8 @@ export default class App extends React.Component<Props> {
         [CameraControl, 'CameraControl', true],
         [MassiveCustomMarkers, 'MassiveCustomMarkers', true],
         [GeojsonMap, 'Geojson', true],
-        [CacheURLTiles, 'CacheURLTiles', true ],
-        [CacheWMSTiles, 'CacheWMSTiles', true ],
+        [CacheURLTiles, 'CacheURLTiles', true],
+        [CacheWMSTiles, 'CacheWMSTiles', true],
       ]
         // Filter out examples that are not yet supported for Google Maps on iOS.
         .filter(

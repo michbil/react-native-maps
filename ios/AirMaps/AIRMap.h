@@ -9,11 +9,11 @@
 
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
-
 #import <React/RCTComponent.h>
 #import "SMCalloutView.h"
 #import "RCTConvert+AirMap.h"
 #import "AIRMapCalloutSubview.h"
+
 
 @class AIRMapMarker;
 
@@ -77,5 +77,7 @@ extern const NSInteger AIRMapMaxZoomLevel;
 
 - (AIRMapMarker*) markerAtPoint:(CGPoint)point;
 - (NSDictionary*) getMarkersFramesWithOnlyVisible:(BOOL)onlyVisible;
+- (void)setUserInterfaceStyle:(NSString*)userInterfaceStyle;
+
 
 @end

@@ -10,9 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-native": "0.65.1",
-    "typescript": "^4.4.3"
+    "react": "18.0.0",
+    "react-native": "0.69.0",
+    "react-native-codegen": "^0.69.1",
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.13.0",
@@ -22,11 +24,19 @@
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
-    "metro-react-native-babel-preset": "^0.66.0",
-    "react-native-codegen": "^0.0.7",
-    "react-test-renderer": "17.0.2"
+    "metro-react-native-babel-preset": "^0.71.1",
+    "react-test-renderer": "18.0.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "codegenConfig": {
+    "libraries": [
+      {
+        "name": "RNMapsComponents",
+        "type": "components",
+        "jsSrcsDir": "../src/NativeComponents"
+      }
+    ]
   }
 }
